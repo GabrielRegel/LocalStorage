@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="usuarioSalvo"></p>
+    <p id="senhaSalva"></p>
+
+    <script>
+        // Verifica se há um valor no localStorage
+        const usuarioSalvo = localStorage.getItem('usuario');
+        const senhaSalva = localStorage.getItem('senha');
+
+
+        // Atualiza o conteúdo do parágrafo se houver um valor armazenado
+        if (usuarioSalvo) {
+            document.getElementById('usuarioSalvo').textContent = `Usuario: ${usuarioSalvo}`;
+        } else {
+            document.getElementById('usuarioSalvo').textContent = 'Nenhum valor armazenado.';
+        }
+
+        
+        if (senhaSalva) {
+            document.getElementById('senhaSalva').textContent = `Senha: ${senhaSalva}`;
+        } else {
+            document.getElementById('senhaSalva').textContent = 'Nenhum valor armazenado.';
+        }
+    </script>
+</body>
+
+
+</html>

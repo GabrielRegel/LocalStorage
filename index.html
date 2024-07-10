@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Input que vai receber o nome do usuario-->
+    <label for="Nome">Nome:</label>
+    <input type="text" id="nome">
+
+    <!--Input que vai receber a senha-->
+    <label for="Senha">Senha:</label>
+    <input type="password" id="Senha">
+
+    <!--Botão que salva no LocalStorage-->
+    <a href="perfil.html"><button onclick="Entrar()">Entrar</button></a>
+
+    <script>
+
+        function Entrar(){
+            let nome = document.getElementById('nome').value
+            let senha = document.getElementById('Senha').value
+
+
+            //envia para o localStorage
+            localStorage.setItem("usuario", nome)
+            localStorage.setItem("senha", senha)
+
+}
+    </script>
+</body>
+</html>
